@@ -74,9 +74,19 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # # ************* For Use SQLITE DB *******************
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    # ************* For Use PostgreSQL DB *******************
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'market_prj_db',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'prj_user',
+        'PASSWORD': 'prj_user',
+        'HOST': 'localhost',
+        'PORT': '5432',                           # from DB Settings
     }
 }
 
